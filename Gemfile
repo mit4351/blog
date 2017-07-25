@@ -5,7 +5,6 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 # Use sqlite3 as the database for Active Record
@@ -48,6 +47,33 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
-
+# group :development, :test do
+#   # pry関連(デバッグなど便利)
+#   gem 'pry-rails'    # rails cの対話式コンソールがirbの代わりにリッチなpryになる
+#   gem 'pry-doc'      # pry中に show-source [method名] でソース内を読める
+#   gem 'pry-byebug'   # binding.pryをソースに記載すると、ブレイクポイントとなりデバッグが可能になる
+#   gem 'pry-stack_explorer' # pry中にスタックを上がったり下がったり行き来できる
+#
+#   # 表示整形関連(ログなど見やすくなる)
+#   gem 'hirb'         # モデルの出力結果を表形式で表示する
+#   gem 'hirb-unicode' # hirbの日本語などマルチバイト文字の出力時の出力結果がすれる問題に対応
+#   gem 'rails-flog', require: 'flog' # HashとSQLのログを見やすく整形
+#   gem 'better_errors'     # 開発中のエラー画面をリッチにする
+#   gem 'binding_of_caller' # 開発中のエラー画面にさらに変数の値を表示する
+#   gem 'awesome_print'     # Rubyオブジェクトに色をつけて表示して見やすくなる
+#   gem 'quiet_assets'      # ログのassetsを表示しないようにし、ログを見やすくしてくれる
+#
+#   # テスト関連
+#   gem "rspec-rails"        # rspec本体
+#   gem "shoulda-matchers"   # モデルのテストを簡易にかけるmatcherが使える
+#   gem "factory_girl_rails" # テストデータ作成
+#   gem "capybara"           # エンドツーエンドテスト
+#   gem "capybara-webkit"    # エンドツーエンドテスト(javascript含む)
+#   gem 'launchy'            # capybaraのsave_and_open_pageメソッドの実行時に画面を開いてくれる
+#   gem "database_cleaner"   # エンドツーエンドテスト時のDBをクリーンにする
+#   gem "test-queue"         # テストを並列で実行する
+#   gem 'faker'              # 本物っぽいテストデータの作成
+#   gem 'faker-japanese'     # 本物っぽいテストデータの作成（日本語対応）
+# end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
